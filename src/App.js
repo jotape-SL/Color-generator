@@ -10,7 +10,13 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('hello');
+    try {
+      let colors = new Values(color).all(10);
+      setList(colors);
+    } catch (error) {
+      setError(true);
+      console.log(error);
+    }
   };
   return (
     <>
@@ -23,13 +29,16 @@ function App() {
           value={color}
           onChange={(e) => setColor(e.target.value)}
           placeholder='#f54260'
+          className={`${error ? 'error' : null}`}
         />
         <button className='btn' type='submit'>
           Send
         </button>
       </form>
       <section className='container'>
-        <h4>list goes here</h4>
+        {list.map((color, i) => {
+          return <SingleColor key={i} {...color} index={i} />;
+        })}
       </section>
       ;
     </>
