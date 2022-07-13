@@ -4,7 +4,7 @@ import SingleColor from './SingleColor';
 import Values from 'values.js';
 
 function App() {
-  const [color, setColor] = useState('');
+  const [color, setColor] = useState('#f54260');
   const [error, setError] = useState(false);
   const [list, setList] = useState([]);
 
@@ -35,9 +35,16 @@ function App() {
           Send
         </button>
       </form>
-      <section className='container'>
-        {list.map((color, i) => {
-          return <SingleColor key={i} {...color} index={i} />;
+      <section className='colors'>
+        {list.map((color, index) => {
+          return (
+            <SingleColor
+              key={index}
+              {...color}
+              index={index}
+              hexColor={`#${color.hex}`}
+            />
+          );
         })}
       </section>
       ;
