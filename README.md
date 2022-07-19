@@ -1,6 +1,6 @@
 # Color generator
 
-Gerador de cores, o usuário entra um valor hexadecimal e damos variações de sombra e luz da cor selecionada. Feito como treino de React.
+Gerador de cores, o usuário entra um valor hexadecimal e recebe variações de sombra e luz da cor selecionada, podendo clicar na cor desejada e adicona-la ao clipborad. Feito como treino de React.
 
 ## 🚀 Como executar o projeto
 
