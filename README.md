@@ -36,7 +36,7 @@ $ npm install; npm install values.js --save; npm start
 
 ##  📚 Bibliotecas
 
-[values.js](https://github.com/noeldelgado/values.js)
+- **[Values.js](https://github.com/noeldelgado/values.js)**
 
 ## 🛠 Tecnologias
 
